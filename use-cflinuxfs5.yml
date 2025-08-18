@@ -4,13 +4,11 @@
     name: cflinuxfs5
     version: latest
 
-
 - type: replace
-  path: /instance_groups/name=diego-cell/jobs/name=garden/properties/garden/rootfs_providers/-
+  path: /instance_groups/name=diego-cell/jobs/-
   value:
-    name: cflinuxfs5
+    name: cflinuxfs5-rootfs-setup
     release: cflinuxfs5
-
 
 - type: replace
   path: /instance_groups/name=api/jobs/name=cloud_controller_ng/properties/cc/stacks/-
