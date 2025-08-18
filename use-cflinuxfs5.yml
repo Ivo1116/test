@@ -1,0 +1,19 @@
+- type: replace
+  path: /releases/-
+  value:
+    name: cflinuxfs5
+    version: latest
+
+
+- type: replace
+  path: /instance_groups/name=diego-cell/jobs/name=garden/properties/garden/rootfs_providers/-
+  value:
+    name: cflinuxfs5
+    release: cflinuxfs5
+
+
+- type: replace
+  path: /instance_groups/name=api/jobs/name=cloud_controller_ng/properties/cc/stacks/-
+  value:
+    name: cflinuxfs5
+    description: "Cloud Foundry Linux FS 5 (Ubuntu Noble)"
