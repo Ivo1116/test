@@ -9,11 +9,12 @@
   value:
     name: cflinuxfs5-rootfs-setup
     release: cflinuxfs5
-    cflinuxfs5-rootfs:
-      trusted_certs:
-        - ((diego_instance_identity_ca.ca))
-        - ((credhub_tls.ca))
-        - ((uaa_ssl.ca))
+    properties:
+      cflinuxfs5-rootfs:
+        trusted_certs:
+          - ((diego_instance_identity_ca.ca))
+          - ((credhub_tls.ca))
+          - ((uaa_ssl.ca))
 
 - type: replace
   path: /instance_groups/name=api/jobs/name=cloud_controller_ng/properties/cc/stacks/-
