@@ -23,13 +23,5 @@
     description: "Cloud Foundry Linux FS 5 (Ubuntu Noble)"
 
 - type: replace
-  path: /instance_groups/name=api/jobs/name=cloud_controller_ng/properties/cc/buildpacks/lifecycle_stacks/-
-  value: cflinuxfs5
-
-- type: replace
-  path: /instance_groups/name=cc-worker/jobs/name=cloud_controller_worker/properties/cc/buildpacks/lifecycle_stacks/-
-  value: cflinuxfs5
-
-- type: replace
   path: /instance_groups/name=api/jobs/name=cloud_controller_ng/properties/cc/default_stack?
   value: cflinuxfs5
