@@ -25,3 +25,11 @@
 - type: replace
   path: /instance_groups/name=api/jobs/name=cloud_controller_ng/properties/cc/default_stack?
   value: cflinuxfs5
+
+- type: replace
+  path: /instance_groups/name=api/jobs/name=cloud_controller_ng/properties/cc/diego/lifecycle_bundles/buildpack~1cflinuxfs5?
+  value: buildpack_app_lifecycle/buildpack_app_lifecycle.tgz
+
+- type: replace
+  path: /instance_groups/name=api/jobs/name=cloud_controller_ng/properties/cc/diego/lifecycle_bundles/cnb~1cflinuxfs5?
+  value: cnb_app_lifecycle/cnb_app_lifecycle.tgz
