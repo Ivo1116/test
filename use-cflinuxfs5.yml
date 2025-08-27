@@ -25,3 +25,15 @@
 - type: replace
   path: /instance_groups/name=api/jobs/name=cloud_controller_ng/properties/cc/default_stack?
   value: cflinuxfs5
+
+- type: replace
+  path: /releases/-
+  value:
+    name: buildpackapplifecycle
+    version: latest
+
+- type: replace
+  path: /instance_groups/name=cc-bridge/jobs/name=buildpackapplifecycle/properties/lifecycles/cflinuxfs5?
+  value:
+    stack: cflinuxfs5
+    buildpack_lifecycle: /var/vcap/packages/buildpackapplifecycle/buildpackapplifecycle
