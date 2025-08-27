@@ -33,3 +33,7 @@
 - type: replace
   path: /instance_groups/name=api/jobs/name=cloud_controller_ng/properties/cc/diego/lifecycle_bundles/cnb~1cflinuxfs5?
   value: cnb_app_lifecycle/cnb_app_lifecycle.tgz
+  
+- type: replace
+  path: /instance_groups/name=diego-cell/jobs/name=rep/properties/diego/rep/preloaded_rootfses/-
+  value: cflinuxfs5:/var/vcap/packages/cflinuxfs5/rootfs.tar
