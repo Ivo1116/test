@@ -33,7 +33,7 @@
     version: latest
 
 - type: replace
-  path: /instance_groups/name=cc-bridge/jobs/name=buildpackapplifecycle/properties/lifecycles/cflinuxfs5?
+  path: /instance_groups/name=api/jobs/name=buildpackapplifecycle/properties/lifecycles/cflinuxfs5?
   value:
     stack: cflinuxfs5
     buildpack_lifecycle: /var/vcap/packages/buildpackapplifecycle/buildpackapplifecycle
